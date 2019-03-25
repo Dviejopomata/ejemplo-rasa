@@ -5,3 +5,8 @@ Contiene un corpus de prueba usando el modelo en Español de Spacy
 ```bash
 make train
 ```
+
+## Hablar
+```bash
+python talk.py
+```
