@@ -30,3 +30,7 @@
 - me siento muy bien
 - estoy genial
 - estoy bien
+
+## intent:out_of_scope
+- quiero pizza
+- tengo hambre

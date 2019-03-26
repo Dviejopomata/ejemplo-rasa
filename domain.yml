@@ -4,11 +4,17 @@ intents:
   - mood_great
   - sugererir_texto
   - buscar_conciertos
+  - out_of_scope
 slots:
   suggestion:
     type: unfeaturized
   conciertos:
     type: list
+  location:
+    type: categorical
+    values:
+      - alicante
+      - valencia
 
 entities:
  - name
@@ -35,11 +41,12 @@ templates:
   utter_did_that_help:
     - text: "Te ayude?"
 
-  #  utter_happy:
-  #  - text: "Genial sigue asi!"
-
   utter_goodbye:
     - text: "Adios"
-
+  utter_out_of_scope:
+    - text: "Sorry, I can’t deal with that request."
+    - text: "I'm sorry, I can't handle that request."
+    - text: "I can't help you with that, I'm sorry."
+    - text: "Even a Rasa bot is not completely perfect - it seems like I can't handle that request."
 forms:
   - suggestion_form

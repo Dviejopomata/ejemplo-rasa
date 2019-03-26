@@ -1,3 +1,4 @@
 language: es
 pipeline: tensorflow_embedding
 spacy_model_name: es_core_news_md
+path: ./projects
