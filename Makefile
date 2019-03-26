@@ -6,12 +6,16 @@ train:
 
 serve:
 	source ./venv/bin/activate; \
-	python3 -m rasa_core.run -d models/current/dialogue -u models/current/nlu
+#	python3 -m rasa_nlu.server --debug --response_log logs --path ./models/current --endpoints endpoints.yml
+	python3 -m rasa_nlu.server --debug --response_log logs --path ./models/current --endpoints endpoints.yml --pre_load models/current/nlu
+# curl "localhost:5000/parse?q=hola&project=nlu"
+# curl "localhost:5000/parse?q=hola&project=nlu&model=current"
 
-#  curl -XPOST localhost:5000/parse -d '{"q":"hello there", "project":"current"}'
 cmdline:
 	source ./venv/bin/activate; \
 	python3 -m rasa_core.run -d models/current/dialogue -u models/current/nlu --debug --endpoints endpoints.yml
 run-actions:
 	source ./venv/bin/activate; \
 	python3 -m rasa_core_sdk.endpoint --actions actions
+train-cmd:  train cmdline
+

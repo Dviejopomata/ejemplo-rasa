@@ -3,17 +3,23 @@ intents:
   - goodbye
   - mood_great
   - sugererir_texto
-
+  - buscar_conciertos
 slots:
   suggestion:
     type: unfeaturized
+  conciertos:
+    type: list
 
+entities:
+ - name
 actions:
   - utter_greet
   - utter_cheer_up
   - action_happy
   - utter_goodbye
   - utter_thank_suggestion
+  - action_mostrar_conciertos
+
 templates:
   utter_ask_suggestion:
     - text: "Por favor escriba su sugerencia"

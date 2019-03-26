@@ -17,6 +17,9 @@
 - hay algo que no entiendo
 - no lo entiendo
 
+## intent: buscar_conciertos
+- dime los conciertos
+- que conciertos hay
 
 ## intent:mood_great
 - perfecto

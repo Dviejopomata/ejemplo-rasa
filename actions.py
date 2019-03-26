@@ -1,6 +1,7 @@
 import logging
 
 from rasa_core_sdk import Action
+from rasa_core_sdk.events import SlotSet
 from rasa_core_sdk.forms import FormAction
 
 logger = logging.getLogger(__name__)
@@ -22,6 +23,22 @@ class ActionHappy(Action):
 
         return []
         # return [SlotSet("matches", result if result is not None else [])]
+
+
+class ActionMostrarConciertos(Action):
+    def name(self):
+        return "action_mostrar_conciertos"
+
+    def run(self, dispatcher, tracker, domain):
+        logger.info("Obteniendo conciertos")
+        conciertos = [
+            {"name": "Estopa", "reviews": 4.5},
+            {"name": "Ambkor", "reviews": 5.}
+        ]
+        dispatcher.utter_message("estos son los conciertos")
+        description = ", ".join([c["name"] for c in conciertos])
+        dispatcher.utter_message("{}".format(description))
+        return [SlotSet("conciertos", conciertos)]
 
 
 class SuggestionForm(FormAction):
