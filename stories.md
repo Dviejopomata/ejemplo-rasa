@@ -2,16 +2,18 @@
 * greet
   - utter_greet
 * mood_great
-  - utter_happy
+  - suggestion_form
+  - action_happy
 
 ## sad path 1
 * greet
   - utter_greet
 * mood_unhappy
+  - suggestion_form
   - utter_cheer_up
   - utter_did_that_help
 * mood_affirm
-  - utter_happy
+  - action_happy
 
 ## sad path 2
 * greet
