@@ -12,20 +12,11 @@
 - nos vemos
 - te veo luego
 
-## intent:mood_affirm
-- si
-- desde luego
-- claro
-- suena bien
-- correcto
+## intent: sugererir_texto
+- tengo una sugerencia
+- hay algo que no entiendo
+- no lo entiendo
 
-## intent:mood_deny
-- no
-- nunca
-- no lo creo
-- no me gusta
-- ni de coña
-- en realidad no
 
 ## intent:mood_great
 - perfecto
@@ -36,15 +27,3 @@
 - me siento muy bien
 - estoy genial
 - estoy bien
-
-## intent:mood_unhappy
-- triste
-- muy triste
-- infeliz
-- mal
-- muy mal
-- horrible
-- fatal
-- no muy bien
-- extremely triste
-- muy triste

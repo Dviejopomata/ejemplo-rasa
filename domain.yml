@@ -1,10 +1,8 @@
 intents:
   - greet
   - goodbye
-  - mood_affirm
-  - mood_deny
   - mood_great
-  - mood_unhappy
+  - sugererir_texto
 
 slots:
   suggestion:
@@ -13,11 +11,12 @@ slots:
 actions:
   - utter_greet
   - utter_cheer_up
-  - utter_did_that_help
   - action_happy
   - utter_goodbye
   - utter_thank_suggestion
 templates:
+  utter_ask_suggestion:
+    - text: "Por favor escriba su sugerencia"
   utter_thank_suggestion:
     - text: "Gracias por la sugerencia :)"
   utter_greet:
